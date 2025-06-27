@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact page for the Alpine Serenity Resort">
+    <meta name="author" content="Peyton Van Voorhees">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Alpine Serenity Resort | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <section class = "container">
+            <nav class="navbar">
+                <div class="nav-left">
+                    <h1>Alpine Serenity Resort</h1>
+                </div>
+                <div class="nav-right">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#accommodations">Accommodations</a>
+                    <a href="#">Contact</a>
+                </div>
+            </nav>
+
+            <img src="images/swiss-valley.jpg" alt="Lush green valley and river in the Swiss Alps" class="hero-image">
+            
+            <h2>Contact Us</h2>
+            <p class="intro-text">
+            Please reach out to us with any questions or concerns. We are happy to help you plan your dream vacation with us!
+            Required fields marked with a *</p>
+
+            <img src="images/swiss-sunset.jpg" alt="Beautiful sunset overlooking the Swiss Alps" class="img-contact">    
+            <section class="contact-section">
+                <form action="https://wp.zybooks.com/form-viewer.php" method="post" class="contact-form">
+    
+                    <div class="form-left">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" name="full-name" required>
+
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-right">
+                        <fieldset class="contact-method">
+                        <legend>Preferred Contact Method *</legend>
+
+                        <label>
+                            <input type="radio" name="contact-method" value="email" required> Email
+                        </label>
+
+                        <label>
+                            <input type="radio" name="contact-method" value="phone"> Phone
+                        </label>
+                        </fieldset>
+
+                        <label for="comments">Comments *</label>
+                        <textarea id="comments" name="comments" rows="5" required></textarea>
+
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+                
+                <footer>
+                    <p>Copyright ©2025 - Alpine Serenity Resort</p>
+                    <p>This site is for educational purposes only</p>
+                </footer>    
+            </section>   
+        </section>    
+    </main>
+
+       
+
+</body>
+</html>

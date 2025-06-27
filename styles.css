@@ -1,0 +1,340 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: floralwhite;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Root Variables */
+:root {
+    --color-header: #D8DFEA;
+    --color-main: #DDE2E8;
+    --color-accent: #3B7446;
+    --color-footer: #8B5E3C;
+    --color-boxes: #FFFFFF;
+    --color-text: #222222;
+    --color-input: #b5dee5;
+    --color-button: #8B5E3C;
+    --drop-shadow: rgba(0, 0, 0, 0.5);
+
+    --font-family-main: 'Montserrat', 'Helvetica Neue', sans-serif;
+    --max-width: 1280px;
+    --base-font-size: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 1440px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: var(--color-main);
+}
+
+.navbar {
+    font-family: var(--font-family-main);
+    width: 1440px;
+    background-color: var(--color-header);
+    color: var(--color-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 122px;
+}
+
+.nav-left {
+    font-size: 36px;
+    padding-left: 2rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 5rem;
+    text-decoration: underline;
+    font-size: 24px;
+    padding-right: 2rem;
+}
+
+nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+nav a:hover, nav a:focus {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+img {
+    padding-bottom: 3rem;
+}
+
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h2, h3 {
+    font-family: var(--font-family-main);
+    background-color: var(--color-accent);
+    color: var(--color-boxes);
+    padding: 0.75rem 1.5rem;
+    margin: 2rem auto 1rem auto;
+    width: fit-content;
+    font-weight: 600;
+    border-radius: 0.25rem;
+}
+
+.intro-text {
+    font-family: var(--font-family-main);
+    max-width: 675px;
+    margin: 1rem auto;
+    line-height: 1.4;
+    font-size: 24px;
+    padding-bottom: 30px;
+}
+
+
+main p {
+    color: var(--color-text);
+    text-align: center;
+    flex: 1;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.content-row {
+    display: flex;
+    font-family: var(--font-family-main);
+}
+
+.pic-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-right: 20px;
+    filter: drop-shadow(3px 4px 4px var(--drop-shadow));
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    padding-right: 10rem;
+}
+
+.text-section p {
+    max-width: 675px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+footer {
+    font-family: var(--font-family-main);
+    background-color: var(--color-footer);
+    color: var(--color-text);
+    text-align: center;
+    padding: 1rem 0 0.5rem 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.img-contact {
+    max-width: 713px;
+    margin: 0 auto;
+}
+
+.contact-section {
+    text-align: center;
+    }
+
+.contact-form {
+    font-family: var(--font-family-main);
+    max-width: 713px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    }
+
+.contact-form label {
+    text-align: left;
+    font-weight: bold;
+    grid-column: span 1;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.5rem;
+    border: 2px solid #333;
+    background-color: var(--color-input);
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form fieldset {
+    grid-column: span 2;
+    border: 2px solid #333;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+.contact-method {
+    display: flex;
+}
+
+.contact-method legend {
+    font-weight: bold;
+}
+
+.contact-method label {
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    accent-color: #000;
+    cursor: pointer;
+}
+
+.contact-method input[type="radio"] {
+    width: 2rem;
+    height: 2rem;
+}
+
+.contact-form legend {
+    font-weight: bold;
+}
+
+.contact-form textarea {
+    grid-column: span 2;
+    resize: vertical;
+}
+
+.contact-form button {
+    grid-column: span 2;
+    background-color: var(--color-button);
+    color: white;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.form-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.form-left, .form-right {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--color-input);
+    border: 1px solid #333;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 1px solid #333;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+button[type="submit"] {
+    font-family: var(--font-family-main);
+    background-color: var(--color-button);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+button[type="submit"]:hover, button[type="submit"]:focus {
+    background-color: #6f472e;
+    outline: none; 
+}
+
